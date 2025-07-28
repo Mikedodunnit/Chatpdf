@@ -11,9 +11,9 @@ import React from "react";
 import { currentUser } from "@clerk/nextjs";
 
 type Props = {
-  params: {
+  params: Promise<{
     chatId: string;
-  };
+  }>;
 };
 
 const ChatPage = async (props: Props) => {

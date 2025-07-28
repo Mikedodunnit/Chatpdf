@@ -6,7 +6,7 @@ import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
 // /api/create-chat
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const { userId } = await auth();
   if (!userId) {
     console.error("No userId found in auth()");
